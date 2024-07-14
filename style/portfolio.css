@@ -154,7 +154,7 @@ footer{
 .footer-column{
     width: 50%;
 }
-input[type="text"], footer input[type="email"], footer textarea{
+footer input[type="text"], footer input[type="email"], footer textarea{
     height:64px ;
     border-radius: 5px;
     background-color: white;
@@ -164,3 +164,22 @@ input[type="text"], footer input[type="email"], footer textarea{
     margin-bottom: 24px;
     border: none;
 }
+/* responsive media query */
+.hide{
+    display: none;
+}
+@media screen and (max-width: 567px) {
+    .skills-container, .resume-container, footer, .about-items {
+        flex-direction: column;
+    }
+    footer, .about{
+        padding: 20px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+    footer input[type="text"], footer input[type="email"], footer textarea{
+        width: calc(100% - 40px);
+    }
+}
+
